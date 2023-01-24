@@ -3,7 +3,8 @@ import styles from "../../styles/Verify.module.css";
 import { signInWithPhoneNumber, RecaptchaVerifier } from "firebase/auth";
 import { authentication } from "../../../firebase";
 import { useRouter } from "next/router";
-
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../../firebase";
 function verify() {
   const router = useRouter();
   const [code, setCode] = useState("");
@@ -37,14 +38,32 @@ function verify() {
       generateRecaptcha();
       let appVerifier = window.recaptchaVerifier;
       signInWithPhoneNumber(authentication, phoneNumber, appVerifier)
-        .then((resp) => console.log(resp))
+        .then((resp) => {
+          window.confirmationResult = resp;
+        })
         .catch((e) => console.log(e));
     }
   }, [phoneNumber]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //do something
+    let confirm = window.confirmationResult;
+    confirm
+      .confirm(code)
+      .then((resp) => {
+        console.log(resp);
+
+        async function addDoc() {
+          const docRef = await setDoc(doc(db, "users", resp.user.uid), {
+            phoneNumber: phoneNumber,
+          });
+        }
+
+        addDoc();
+      })
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (
