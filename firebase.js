@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCzmM3ztf8x304erx53esZfelriUfgqCAo",
-  authDomain: "https://gpt-sms-web.vercel.app/",
+  authDomain: "gpt-sms.firebaseapp.com",
   projectId: "gpt-sms",
   storageBucket: "gpt-sms.appspot.com",
   messagingSenderId: "85766567466",
