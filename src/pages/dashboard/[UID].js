@@ -1,13 +1,15 @@
 import React from "react";
+import { PaymentElement } from "@stripe/react-stripe-js";
 
 function Dashboard() {
   return (
     <div>
       <h2>balance</h2>
       <p>idk</p>
-      <button>
-        <p>buy credits</p>
-      </button>
+      {/* <form>
+        <PaymentElement />
+        <button>Submit</button>
+      </form> */}
     </div>
   );
 }
