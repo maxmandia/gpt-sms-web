@@ -5,6 +5,8 @@ import { authentication } from "../../../firebase";
 import { useRouter } from "next/router";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
+import Router from "next/router";
+
 function verify() {
   const router = useRouter();
   const [code, setCode] = useState("");
@@ -57,6 +59,7 @@ function verify() {
           const docRef = await setDoc(doc(db, "users", resp.user.uid), {
             phoneNumber: phoneNumber,
           });
+          Router.push(`/dashboard/${resp.user.uid}`);
         }
 
         addDoc();

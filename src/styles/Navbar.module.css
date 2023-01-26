@@ -1,0 +1,25 @@
+.navContainer {
+  width: 100%;
+}
+
+.innerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+
+.emojis {
+  font-size: 20px;
+}
+
+.dashText {
+  color: white;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .emojis {
+    font-size: 35px;
+  }
+}
