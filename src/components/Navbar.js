@@ -5,8 +5,10 @@ import styles from "../styles/Navbar.module.css";
 function Navbar() {
   return (
     <div className={styles.navContainer}>
-      <Logo />
-      <HamburgerMenuIcon height={30} width={30} />
+      <div className={styles.innerNav}>
+        <Logo />
+        <HamburgerMenuIcon color="white" height={30} width={30} />
+      </div>
     </div>
   );
 }
