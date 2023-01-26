@@ -21,9 +21,11 @@ const SF_Rounded = localFont({
     },
   ],
 });
+
+const SF_PRO = localFont({ src: "../assets/fonts/SF-Pro-Display-Regular.otf" });
 export default function App({ Component, pageProps }) {
   return (
-    <main className={SF_Rounded.className}>
+    <main className={`${SF_Rounded.className}, ${SF_PRO.className}`}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
