@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import styles from "../../styles/auth.module.css";
+import styles from "../../styles/Auth.module.css";
 import * as Label from "@radix-ui/react-label";
 import { signInWithPhoneNumber, RecaptchaVerifier } from "firebase/auth";
 import { authentication } from "../../../firebase";
