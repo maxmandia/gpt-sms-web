@@ -3,6 +3,12 @@
   padding: 0px;
 }
 
+input {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+}
+
 button {
   border: 0px;
 }

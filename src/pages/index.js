@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter();
 
   function handleSignup() {
-    router.push("/signup/enterPhone");
+    router.push("/signup/auth");
   }
   return (
     <div className={styles.homeContainer}>
