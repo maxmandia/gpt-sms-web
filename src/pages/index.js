@@ -1,14 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
+  function handleSignup() {
+    router.push("/signup/auth");
+  }
   return (
     <div className={styles.homeContainer}>
       <h2 className={styles.heroText}>
         Artificial intelligence you can <span>text.</span>
       </h2>
-      <button className={styles.startedButton}>Get Started</button>
+      <button onClick={handleSignup} className={styles.startedButton}>
+        Get Started
+      </button>
       <div className={styles.profileCircle}>
         <p>🤖</p>
       </div>

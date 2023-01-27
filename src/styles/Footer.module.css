@@ -1,23 +1,15 @@
 .footerContainer {
-  position: relative;
-}
-
-.footerTilt {
-  /* position: relative; */
-
-  height: 50px;
-  width: 100vw;
-  transform: skewY(3deg);
+  position: absolute;
   margin-top: 2rem;
-  background-color: #1f1f1f;
 }
 
 .footerMain {
-  position: absolute;
   top: 10px;
   background-color: #1f1f1f;
   height: 65px;
   width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 .footerText {
@@ -38,16 +30,6 @@
   .footerContainer {
     position: relative;
     margin-top: 7%;
-  }
-
-  .footerTilt {
-    /* position: relative; */
-
-    height: 50px;
-    width: 100vw;
-    transform: skewY(2deg);
-    margin-top: 2rem;
-    background-color: transparent;
   }
 
   .footerMain {

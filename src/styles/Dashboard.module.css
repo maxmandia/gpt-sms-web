@@ -1,0 +1,28 @@
+.dashboardContainer {
+  height: 100vh;
+  text-align: center;
+}
+
+.balance {
+  margin-top: 50%;
+  color: white;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.balanceText {
+  margin-top: 0.75rem;
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.buyBtn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 28px;
+  background-color: #ff0800;
+  color: white;
+  border-radius: 9px;
+  margin-top: 3rem;
+}

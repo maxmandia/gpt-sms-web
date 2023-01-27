@@ -1,0 +1,43 @@
+.enterPhoneContainer {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.labelRoot {
+  background-color: white;
+}
+
+.phoneHeader {
+  color: white;
+  font-size: 25px;
+  margin-top: 10rem;
+}
+
+.input {
+  margin-top: 1rem;
+  width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 35px;
+  font-size: 15px;
+  line-height: 1;
+  color: white;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 0 1px var(--blackA9);
+}
+
+.submitButton {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 28px;
+  background-color: #ff0800;
+  color: white;
+  border-radius: 9px;
+  margin-top: 1.5rem;
+}
